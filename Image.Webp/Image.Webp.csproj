@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<AssemblyName>ImageConversion</AssemblyName>
+		<RootNamespace>ImageConversion</RootNamespace>
+		<PackageId>ImageConversion</PackageId>
+		<Authors>Tech J Mage</Authors>
+		<Product>ImageConversion.Core</Product>
+		<Description>
+			simple and light .netcore package for work with images.
+			convert , resize and compress jpeg, png and webp images.
+			convert from static path and web path.
+		</Description>
+		<Copyright>Tech J Mage (palash.karmaker@outlook.com) @ 2021</Copyright>
+		<PackageProjectUrl>https://github.com/techJmage/WebPImage</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/mojtabamoradi/Moraba/master/logo.png</PackageIconUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/techJmage/WebPImage</RepositoryUrl>
+		<PackageTags>convert image,webp image,webp images,convert-jpeg-to-webp,convert-png-to-webp,convert-images,.netcore,c#</PackageTags>
+		<PackageReleaseNotes>on this version convert images from web address.</PackageReleaseNotes>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>1.1.3</Version>
+		<AssemblyVersion>1.1.3</AssemblyVersion>
+		<FileVersion>1.1.3</FileVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PackageIcon>ImageConversion.jpg</PackageIcon>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\..\..\..\Pictures\ImageConversion.jpg">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Drawing.Common" Version="9.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="libwebp_x64.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="libwebp_x86.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<SupportedPlatform Include="windows6.1" />
+	</ItemGroup>
+</Project>
